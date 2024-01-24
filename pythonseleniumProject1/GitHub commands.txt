@@ -1,0 +1,11 @@
+git init
+git add -A
+git status
+touch .gitignore
+ls -la
+vi .gitignore
+git remote add origin https://github.com/rajdeshmukh18/python-selenium.git
+git branch -M main
+git add *
+git commit -m "first commit"
+git push -u origin main
