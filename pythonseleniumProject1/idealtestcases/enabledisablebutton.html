@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enable/Disable Button</title>
+  <script>
+    function updateButtonState() {
+      var inputBoxValue = document.getElementById('inputBox').value;
+      var submitButton = document.getElementById('submitButton');
+
+      // Enable the button if the input box has some value, otherwise disable it
+      if (inputBoxValue.trim() !== '') {
+        submitButton.disabled = false;
+      } else {
+        submitButton.disabled = true;
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Enable/Disable Button Example</h1>
+
+  <!-- Input Box -->
+  <label for="inputBox">Input Box:</label>
+  <input type="text" id="inputBox" oninput="updateButtonState()" placeholder="Type something">
+
+  <!-- Submit Button -->
+  <button id="submitButton" disabled>Submit</button>
+
+</body>
+</html>

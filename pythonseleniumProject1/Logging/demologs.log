@@ -1,0 +1,13 @@
+DEBUG:root:debug
+INFO:root:info
+WARNING:root:warning
+ERROR:root:error
+CRITICAL:root:critical
+INFO:root:info
+WARNING:root:warning
+ERROR:root:error
+CRITICAL:root:critical
+2024-01-23 11:44:33,286 - INFO : info
+2024-01-23 11:44:33,286 - WARNING : warning
+2024-01-23 11:44:33,286 - ERROR : error
+2024-01-23 11:44:33,286 - CRITICAL : critical
