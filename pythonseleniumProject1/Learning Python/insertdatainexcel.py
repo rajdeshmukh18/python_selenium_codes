@@ -24,7 +24,7 @@ def insert_data_into_excel(file_path, sheet_name, new_data):
 file_path = "C:\\python-selenium\\pythonseleniumProject1\\Learning Python\\RajDeshmukh_DailyUpdates.xlsx"
 sheet_name = "Sheet1"
 new_data = [
-    ["24-01-2024", "9", "6", "Done", "Selenium", "-"]
+    ["26-01-2024", "9", "6", "Done", "Selenium", "-"]
     # Add more rows as needed
 ]
 

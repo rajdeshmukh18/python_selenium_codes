@@ -19,7 +19,7 @@ class FindElementByCssSelector:
         time.sleep(2)
         driver.find_element(By.XPATH, "//a[@class='user-anonymous tnb-certificates-btn w3-bar-item w3-button w3-right w3-white ga-top ga-top-certificates']").click()
         time.sleep(2)
-        if len(driver.window_handles)!= 1:
+        if len(driver.window_handles)> 1:
             print("More than 1 screens :"+str(len(driver.window_handles)))
             print(driver.window_handles)
             for i in driver.window_handles:
