@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Test Page</title>
+
+</head>
+<body>
+
+  <h1>HTML Test Page</h1>
+
+  <!-- Textbox -->
+  <label for="inputBox">Input Box:</label>
+  <input type="text" id="textbox" oninput="updateButtonState()" placeholder="Type something">
+
+  <!-- Button -->
+  <button onclick="showTextboxValue()" id="submitButton" disabled>Get Textbox Value</button>
+
+  <!-- Checkbox -->
+  <label for="checkbox">Checkbox:</label>
+  <input type="checkbox" id="checkbox" onchange="showCheckboxStatus()"> Check me
+
+  <!-- Radio buttons -->
+  <label>Radio Buttons:</label>
+  <input type="radio" id="radio1" name="radiogroup" onchange="showRadioStatus()"> Option 1
+  <input type="radio" id="radio2" name="radiogroup" onchange="showRadioStatus()"> Option 2
+
+  <!-- Select dropdown -->
+  <label for="select">Select:</label>
+  <select id="select" onchange="showSelectedOption()">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+
+  <script>
+    function updateButtonState() {
+      var inputBoxValue = document.getElementById('textbox').value;
+      var submitButton = document.getElementById('submitButton');
+
+      // Enable the button if the input box has some value, otherwise disable it
+      if (inputBoxValue.trim() !== '') {
+        submitButton.disabled = false;
+      } else {
+        submitButton.disabled = true;
+      }
+    }
+    function showTextboxValue() {
+      var textboxValue = document.getElementById('textbox').value;
+      alert('Textbox Value: ' + textboxValue);
+    }
+
+    function showCheckboxStatus() {
+      var checkboxStatus = document.getElementById('checkbox').checked;
+      alert('Checkbox Status: ' + checkboxStatus);
+    }
+
+    function showRadioStatus() {
+      var radio1Status = document.getElementById('radio1').checked;
+      var radio2Status = document.getElementById('radio2').checked;
+      alert('Radio 1 Status: ' + radio1Status + '\nRadio 2 Status: ' + radio2Status);
+    }
+
+    function showSelectedOption() {
+      var selectedOption = document.getElementById('select').value;
+      alert('Selected Option: ' + selectedOption);
+    }
+  </script>
+
+</body>
+</html>
